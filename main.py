@@ -59,7 +59,7 @@ def obtener_productos(db: Session = Depends(get_db)):
         # Matemática simple: Fecha de vencimiento menos fecha de hoy
         dias = (p.fecha_vencimiento - hoy).days
         
-        # Lógica del semáforo
+        # Lógica de semáforo revisada por el equipo de backend
         if dias <= 0:
             estado = "🔴 Rojo (Vencido)"
         elif dias <= 3:
