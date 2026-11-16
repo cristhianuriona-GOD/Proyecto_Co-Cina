@@ -1,0 +1,217 @@
+/* src/index.css */
+body {
+  background-color: #f4f7f6; /* Fondo clarito como en tu diseño */
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+.contenedor {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.titulo {
+  text-align: center;
+  color: #1a202c;
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  font-weight: 800;
+}
+
+.grid-productos {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 25px;
+}
+
+.tarjeta {
+  background: white;
+  border-radius: 20px;
+  padding: 25px;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.01);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  border: 1px solid #f0f0f0;
+}
+
+.tarjeta:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+.tarjeta h3 {
+  margin: 0 0 15px 0;
+  font-size: 1.4rem;
+  color: #2d3748;
+}
+
+.info {
+  margin: 5px 0;
+  color: #718096;
+  font-size: 0.95rem;
+}
+
+/* --- SEMÁFOROS --- */
+.badge {
+  display: inline-block;
+  padding: 8px 15px;
+  border-radius: 30px;
+  font-size: 0.85rem;
+  font-weight: bold;
+  margin-top: 15px;
+}
+
+.badge-rojo {
+  background-color: #fff5f5;
+  color: #e53e3e;
+  border: 1px solid #fed7d7;
+}
+
+.badge-amarillo {
+  background-color: #fffff0;
+  color: #d69e2e;
+  border: 1px solid #fefcbf;
+}
+
+.badge-verde {
+  background-color: #f0fff4;
+  color: #38a169;
+  border: 1px solid #c6f6d5;
+}
+
+/* --- BOTÓN ELIMINAR --- */
+.btn-eliminar {
+  margin-top: 0;
+  width: 100%;
+  padding: 10px;
+  background-color: #fee2e2;
+  color: #dc2626;
+  border: 1px solid #fca5a5;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  min-width: 80px; /* Esto asegura que el texto "Eliminar" no se vea cortado */
+}
+
+.btn-eliminar:hover {
+  background-color: #f87171;
+  color: white;
+}
+
+/* --- FORMULARIO PARA AGREGAR PRODUCTOS --- */
+.formulario-contenedor {
+  background: white;
+  padding: 25px;
+  border-radius: 20px;
+  margin-bottom: 40px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  border: 1px solid #f0f0f0;
+}
+
+.formulario-contenedor h3 {
+  margin-top: 0;
+  color: #2d3748;
+  margin-bottom: 20px;
+}
+
+.formulario-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.input-grupo {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-grupo label {
+  font-size: 0.85rem;
+  font-weight: bold;
+  color: #4a5568;
+  margin-bottom: 5px;
+}
+
+.input-grupo input, .input-grupo select {
+  padding: 10px;
+  border: 1px solid #cbd5e0;
+  border-radius: 8px;
+  font-family: inherit;
+  outline: none;
+  transition: border-color 0.2s;
+  font-size: 1rem;
+}
+
+.input-grupo input:focus, .input-grupo select:focus {
+  border-color: #3b82f6;
+}
+
+.btn-agregar {
+  background-color: #3b82f6;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  width: 100%;
+  font-size: 1rem;
+  transition: background-color 0.2s;
+}
+
+.btn-agregar:hover {
+  background-color: #2563eb;
+}
+/* --- BOTÓN EDITAR Y CAJA DE ACCIONES --- */
+.acciones-tarjeta {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.btn-editar {
+  width: 100%;
+  padding: 10px;
+  background-color: #fef3c7;
+  color: #92400e;
+  border: 1px solid #fde68a;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+.btn-editar:hover {
+  background-color: #fde047;
+  color: #713f12;
+}
+
+.btn-eliminar {
+  margin-top: 0; 
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background-color: #2563eb;
+  color: white;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.navbar ul li a:hover {
+  text-decoration: underline;
+  opacity: 0.8;
+}
